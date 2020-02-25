@@ -36,20 +36,23 @@ class NumberServer(BaseHTTPRequestHandler):
 class HTTPServerV6(HTTPServer):
   address_family = socket.AF_INET6
 
-def run(server_class=HTTPServerV6, handler_class=NumberServer, port=80):
+def run(port):
     server_address = ('::', port)
-    httpd = server_class(server_address, handler_class)
+    httpd = HTTPServerV6(server_address, NumberServer)
     print 'Starting number server...'
-    httpd.serve_forever()
+    try:
+        httpd.serve_forever()
+    except (KeyboardInterrupt, SystemExit):
+        pass
 
 if __name__ == "__main__":
     from sys import argv
 
-    try:
-        if len(argv) == 2:
-            run(port=int(argv[1]))
-        else:
-            run()
-    except (KeyboardInterrupt, SystemExit):
-        pass
+    if len(argv) != 2:
+        print('Usage: ./numberserver.py <port>')
+        exit(-1)
+
+    run(port=int(argv[1]))
+
+
 
