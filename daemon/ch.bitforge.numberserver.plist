@@ -14,5 +14,7 @@
         <string>/usr/local/bin/numberserver.py</string>
         <string>4242</string>
     </array>
+    <key>WorkingDirectory</key>
+    <string>/usr/local/srv/numberserver</string>
   </dict>
 </plist>
