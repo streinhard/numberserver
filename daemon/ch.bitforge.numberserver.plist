@@ -10,7 +10,8 @@
     <false/>
     <key>ProgramArguments</key>
     <array>
-        <string>numberserver.py</string>
+        <string>/usr/bin/python</string>
+        <string>/usr/local/bin/numberserver.py</string>
         <string>4242</string>
     </array>
   </dict>
