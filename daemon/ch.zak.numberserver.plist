@@ -3,7 +3,7 @@
 <plist version="1.0">
   <dict>
     <key>Label</key>
-    <string>ch.bitforge.numberserver</string>
+    <string>ch.zak.numberserver</string>
     <key>RunAtLoad</key>
     <true/>
     <key>KeepAlive</key>
@@ -15,6 +15,6 @@
         <string>4242</string>
     </array>
     <key>WorkingDirectory</key>
-    <string>/usr/local/srv/numberserver</string>
+    <string>/usr/local/srv/numberserver/zak</string>
   </dict>
 </plist>
